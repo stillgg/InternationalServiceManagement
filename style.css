@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  overflow: hidden;
+  margin: auto;
+  padding: 5px;
+}
+
+.img {
+  width: calc(50% - 10px);
+  margin: 5px;
+  opacity: 0;
+  transition: 0.3s opacity;
+}
+
+.img.active {
+  opacity: 1;
+}
+
+.img.left {
+  float: left;
+}
+
+.img.right {
+  float: right;
+}
+
+@media (max-width: 1199.98px) {
+  .images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .img {
+    width: 100%;
+    height: auto !important;
+  }
+
+  .img.left,
+  .img.right {
+    float: none;
+    margin: 0;
+  }
+}
